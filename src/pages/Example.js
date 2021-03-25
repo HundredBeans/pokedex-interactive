@@ -1,33 +1,33 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Box, Grid, VStack, Text, Code, Link } from "@chakra-ui/react";
 import Logo from "../components/Logo";
-import { DefaultContext } from "../context/DefaultContext";
+// import { DefaultContext } from "../context/DefaultContext";
 
 function Example() {
-  const [pokemons, caughtPokemons] = useContext(DefaultContext);
-  pokemons.setItem("test", {
-    url: "https://pokeapi.co/api/v2/pokemon/2/",
-    name: "ivysaur",
-    image:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
-  });
+  // const [pokemons, caughtPokemons] = useContext(DefaultContext);
+  // pokemons.setItem("test", {
+  //   url: "https://pokeapi.co/api/v2/pokemon/2/",
+  //   name: "ivysaur",
+  //   image:
+  //     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+  // });
 
-  caughtPokemons.setItem("testCaught", {
-    url: "https://pokeapi.co/api/v2/pokemon/3/",
-    name: "venusaur",
-    image:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
-  });
+  // caughtPokemons.setItem("testCaught", {
+  //   url: "https://pokeapi.co/api/v2/pokemon/3/",
+  //   name: "venusaur",
+  //   image:
+  //     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+  // });
 
-  pokemons
-    .getItem("test")
-    .then((result) => console.log(result))
-    .catch((err) => console.log(err));
+  // pokemons
+  //   .getItem("test")
+  //   .then((result) => console.log(result))
+  //   .catch((err) => console.log(err));
 
-  caughtPokemons
-    .getItem("testCaught")
-    .then((result) => console.log(result))
-    .catch((err) => console.log(err));
+  // caughtPokemons
+  //   .getItem("testCaught")
+  //   .then((result) => console.log(result))
+  //   .catch((err) => console.log(err));
 
   return (
     <Box textAlign="center" fontSize="xl">

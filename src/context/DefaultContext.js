@@ -1,27 +1,32 @@
 import React, { createContext } from "react";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import localForage from "localforage";
+import Localbase from "localbase";
+
+let db = new Localbase("db");
+db.config.debug = false;
 
 const client = new ApolloClient({
   uri: "https://graphql-pokeapi.vercel.app/api/graphql",
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    typePolicies: {
+      PokemonItem: {
+        fields: {
+          owned: {
+            read: () => {
+              return 10;
+            },
+          },
+        },
+      },
+    },
+  }),
 });
 
 export const DefaultContext = createContext();
 
 export const DefaultContextProvider = (props) => {
-  localForage.config({
-    driver: localForage.INDEXEDDB,
-  });
-  let pokemons = localForage.createInstance({
-    name: "pokemons",
-  });
-  let caughtPokemons = localForage.createInstance({
-    name: "caughtPokemons",
-  });
-
   return (
-    <DefaultContext.Provider value={[pokemons, caughtPokemons]}>
+    <DefaultContext.Provider value={{ db }}>
       <ApolloProvider client={client}>{props.children}</ApolloProvider>
     </DefaultContext.Provider>
   );

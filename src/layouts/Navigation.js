@@ -6,18 +6,22 @@ import {
   Link,
   useColorModeValue,
   useBreakpointValue,
-  Icon,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useHistory, matchPath } from "react-router-dom";
 import ColorModeSwitcher from "../components/ColorModeSwitcher";
 import HeaderLogo from "../components/HeaderLogo";
-import { CgPokemon, CgSearch, CgList } from "react-icons/cg";
+// import { CgPokemon, CgSearch, CgList } from "react-icons/cg";
+import BackButton from "../components/BackButton";
 
 function Navigation(props) {
   const navColor = useColorModeValue("#FAF5FF", "#1A202C");
-  const MotionHeading = motion(Heading);
   const isMd = useBreakpointValue({ base: true, md: false });
+  const history = useHistory();
+  const match = matchPath(history.location.pathname, {
+    path: "/pokemons/:id",
+    exact: true,
+    strict: false,
+  });
 
   return (
     <React.Fragment>
@@ -33,36 +37,33 @@ function Navigation(props) {
           zIndex="banner"
           background={navColor}
         >
-          <HeaderLogo />
+          {match ? (
+            <Box d="flex" alignItems="center" justifyContent="center">
+              <BackButton />
+              <Heading pl={2} size="lg">
+                {match.params.id.toString().toUpperCase()}
+              </Heading>
+            </Box>
+          ) : (
+            <HeaderLogo />
+          )}
           <Flex align="center" justify="center" justifyContent="space-between">
             {!isMd ? (
               <React.Fragment>
                 <Link as={RouterLink} to="/listofall" _hover="none">
-                  <MotionHeading
-                    whileHover={{ opacity: 0.5 }}
-                    p={5}
-                    fontSize="lg"
-                  >
+                  <Heading _hover={{ opacity: 0.5 }} p={5} fontSize="lg">
                     List of All Pokemons
-                  </MotionHeading>
+                  </Heading>
                 </Link>
                 <Link as={RouterLink} to="/pokedetails" _hover="none">
-                  <MotionHeading
-                    whileHover={{ opacity: 0.5 }}
-                    p={5}
-                    fontSize="lg"
-                  >
+                  <Heading _hover={{ opacity: 0.5 }} p={5} fontSize="lg">
                     Battle
-                  </MotionHeading>
+                  </Heading>
                 </Link>
                 <Link as={RouterLink} to="/about" _hover="none">
-                  <MotionHeading
-                    whileHover={{ opacity: 0.5 }}
-                    p={5}
-                    fontSize="lg"
-                  >
+                  <Heading _hover={{ opacity: 0.5 }} p={5} fontSize="lg">
                     About
-                  </MotionHeading>
+                  </Heading>
                 </Link>
               </React.Fragment>
             ) : (
@@ -75,7 +76,7 @@ function Navigation(props) {
         </Flex>
       </header>
       {/* Bottom Navigation */}
-      <Box
+      {/* <Box
         bottom="0"
         position="fixed"
         width="100%"
@@ -97,7 +98,7 @@ function Navigation(props) {
             <Icon fontSize="5xl" as={CgSearch} />
           </Link>
         </Flex>
-      </Box>
+      </Box> */}
     </React.Fragment>
   );
 }
