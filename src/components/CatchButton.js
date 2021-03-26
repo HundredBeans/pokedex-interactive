@@ -15,6 +15,7 @@ import {
   FormControl,
   FormLabel,
   Input,
+  // useBreakpointValue,
 } from "@chakra-ui/react";
 // import { Formik } from "formik";
 import pokeball from "../assets/pokeball.png";
@@ -24,15 +25,15 @@ function CatchButton(props) {
   const open = () => {
     setIsOpen(!isOpen);
   };
-  const close = () => {
+  const closePopover = () => {
     setIsOpen(false);
   };
-  console.log("CatchSuccess", props.catchSuccess);
   return (
     <React.Fragment>
       <Box
         bottom="0"
-        right="0"
+        left="50%"
+        transform="translate(-50%, 0);"
         position="fixed"
         zIndex="banner"
         shadow="lg"
@@ -48,20 +49,15 @@ function CatchButton(props) {
           <Image src={pokeball} />
         </Button>
       </Box>
-      <Popover
-        isOpen={isOpen}
-        onClose={close}
-        closeOnBlur={false}
-        colorScheme="green"
-      >
+      <Popover isOpen={isOpen} onClose={closePopover} closeOnBlur={false}>
         <PopoverTrigger>
-          <Box bottom="100px" right="0" position="fixed"></Box>
+          <Box bottom="100px" right="50%" position="fixed"></Box>
         </PopoverTrigger>
-        <PopoverContent width="100%">
+        <PopoverContent width="100%" shadow="dark-lg">
           {props.catchSuccess ? (
             <CatchSuccessContent {...props} />
           ) : (
-            <InitialContent {...props} />
+            <InitialContent close={closePopover} {...props} />
           )}
         </PopoverContent>
       </Popover>
@@ -90,13 +86,13 @@ const InitialContent = (props) => {
         <ButtonGroup size="sm">
           <Button
             variant="outline"
-            onClick={close}
+            onClick={props.close}
             disabled={props.catchLoading}
           >
             Cancel
           </Button>
           <Button
-            colorScheme="red"
+            colorScheme="teal"
             onClick={props.catchPokemon}
             isLoading={props.catchLoading}
             loadingText="Catching..."
@@ -112,9 +108,7 @@ const InitialContent = (props) => {
 const SetNicknameForm = (props) => {
   const [nickname, setNickname] = useState("");
   const handleChange = (e) => {
-    console.log(e.target.value);
     setNickname(e.target.value);
-    console.log("nickname", nickname);
   };
   return (
     <React.Fragment>
@@ -129,7 +123,7 @@ const SetNicknameForm = (props) => {
       <PopoverFooter d="flex" justifyContent="flex-end">
         <ButtonGroup size="sm">
           <Button
-            colorScheme="red"
+            colorScheme="teal"
             isLoading={props.isSaving}
             loadingText="Saving..."
             disabled={!nickname}

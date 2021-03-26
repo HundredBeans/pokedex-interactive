@@ -1,12 +1,12 @@
 import React from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import { ChakraProvider, theme } from "@chakra-ui/react";
 import DefaultLayout from "./layouts/DefaultLayout";
 import { DefaultContextProvider } from "./context/DefaultContext";
-import Example from "./pages/Example";
 import PokemonList from "./pages/PokemonList";
 import PokemonDetails from "./pages/PokemonDetails";
-import ExchangeRates from "./pages/Main";
+import MyPokemonList from "./pages/MyPokemonList";
+import MyPokemonDetails from "./pages/MyPokemonDetails";
 
 function App() {
   return (
@@ -15,17 +15,20 @@ function App() {
         <BrowserRouter>
           <Switch>
             <DefaultLayout>
-              <Route exact path="/example">
-                <Example />
-              </Route>
               <Route exact path="/pokemons">
                 <PokemonList />
               </Route>
               <Route exact path="/pokemons/:id">
                 <PokemonDetails />
               </Route>
+              <Route exact path="/my-pokemons">
+                <MyPokemonList />
+              </Route>
+              <Route exact path="/my-pokemons/:id">
+                <MyPokemonDetails />
+              </Route>
               <Route exact path="/">
-                <ExchangeRates />
+                <Redirect to="/pokemons" />
               </Route>
             </DefaultLayout>
           </Switch>

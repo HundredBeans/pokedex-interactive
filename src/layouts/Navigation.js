@@ -6,22 +6,30 @@ import {
   Link,
   useColorModeValue,
   useBreakpointValue,
+  Icon,
+  Tooltip,
 } from "@chakra-ui/react";
 import { Link as RouterLink, useHistory, matchPath } from "react-router-dom";
 import ColorModeSwitcher from "../components/ColorModeSwitcher";
 import HeaderLogo from "../components/HeaderLogo";
-// import { CgPokemon, CgSearch, CgList } from "react-icons/cg";
+import { CgPokemon, CgList } from "react-icons/cg";
 import BackButton from "../components/BackButton";
 
 function Navigation(props) {
   const navColor = useColorModeValue("#FAF5FF", "#1A202C");
   const isMd = useBreakpointValue({ base: true, md: false });
   const history = useHistory();
-  const match = matchPath(history.location.pathname, {
-    path: "/pokemons/:id",
-    exact: true,
-    strict: false,
-  });
+  const match =
+    matchPath(history.location.pathname, {
+      path: "/pokemons/:id",
+      exact: true,
+      strict: false,
+    }) ||
+    matchPath(history.location.pathname, {
+      path: "/my-pokemons/:id",
+      exact: true,
+      strict: false,
+    });
 
   return (
     <React.Fragment>
@@ -40,9 +48,14 @@ function Navigation(props) {
           {match ? (
             <Box d="flex" alignItems="center" justifyContent="center">
               <BackButton />
-              <Heading pl={2} size="lg">
-                {match.params.id.toString().toUpperCase()}
-              </Heading>
+              <Tooltip
+                label={match.params.id.toString().toUpperCase()}
+                aria-label="Pokemon Name"
+              >
+                <Heading pl={2} size="lg" isTruncated={true} maxWidth="60vw">
+                  {match.params.id.toString().toUpperCase()}
+                </Heading>
+              </Tooltip>
             </Box>
           ) : (
             <HeaderLogo />
@@ -50,19 +63,14 @@ function Navigation(props) {
           <Flex align="center" justify="center" justifyContent="space-between">
             {!isMd ? (
               <React.Fragment>
-                <Link as={RouterLink} to="/listofall" _hover="none">
+                <Link as={RouterLink} to="/pokemons" _hover="none">
                   <Heading _hover={{ opacity: 0.5 }} p={5} fontSize="lg">
-                    List of All Pokemons
+                    Pokemons List
                   </Heading>
                 </Link>
-                <Link as={RouterLink} to="/pokedetails" _hover="none">
+                <Link as={RouterLink} to="/my-pokemons" _hover="none">
                   <Heading _hover={{ opacity: 0.5 }} p={5} fontSize="lg">
-                    Battle
-                  </Heading>
-                </Link>
-                <Link as={RouterLink} to="/about" _hover="none">
-                  <Heading _hover={{ opacity: 0.5 }} p={5} fontSize="lg">
-                    About
+                    My Pokemons
                   </Heading>
                 </Link>
               </React.Fragment>
@@ -76,7 +84,7 @@ function Navigation(props) {
         </Flex>
       </header>
       {/* Bottom Navigation */}
-      {/* <Box
+      <Box
         bottom="0"
         position="fixed"
         width="100%"
@@ -88,17 +96,18 @@ function Navigation(props) {
         display={!isMd ? "none" : ""}
       >
         <Flex justifyContent="space-around">
-          <Link as={RouterLink} _active={{ color: "green" }} to="/example">
+          <Link as={RouterLink} _active={{ color: "green" }} to="/pokemons">
             <Icon fontSize="5xl" as={CgList} />
           </Link>
-          <Link as={RouterLink} _activeLink={{ opacity: 0.5 }} to="/">
+          <Link
+            as={RouterLink}
+            _activeLink={{ opacity: 0.5 }}
+            to="/my-pokemons"
+          >
             <Icon fontSize="5xl" as={CgPokemon} />
           </Link>
-          <Link as={RouterLink} _activeLink={{ opacity: 0.5 }} to="/">
-            <Icon fontSize="5xl" as={CgSearch} />
-          </Link>
         </Flex>
-      </Box> */}
+      </Box>
     </React.Fragment>
   );
 }

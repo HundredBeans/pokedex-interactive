@@ -1,33 +1,17 @@
-import React, { createContext } from "react";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import Localbase from "localbase";
+import React from "react";
+import Loader from "../components/Loader";
+import { ApolloClient, ApolloProvider } from "@apollo/client";
+import { cache } from "../helpers/cache";
 
-let db = new Localbase("db");
-db.config.debug = false;
-
-const client = new ApolloClient({
+export const client = new ApolloClient({
   uri: "https://graphql-pokeapi.vercel.app/api/graphql",
-  cache: new InMemoryCache({
-    typePolicies: {
-      PokemonItem: {
-        fields: {
-          owned: {
-            read: () => {
-              return 10;
-            },
-          },
-        },
-      },
-    },
-  }),
+  cache: cache,
 });
 
-export const DefaultContext = createContext();
-
 export const DefaultContextProvider = (props) => {
-  return (
-    <DefaultContext.Provider value={{ db }}>
-      <ApolloProvider client={client}>{props.children}</ApolloProvider>
-    </DefaultContext.Provider>
-  );
+  if (!client) {
+    return <Loader loadingText={"Initializing app..."} />;
+  }
+
+  return <ApolloProvider client={client}>{props.children}</ApolloProvider>;
 };

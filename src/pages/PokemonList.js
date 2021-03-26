@@ -9,53 +9,35 @@ import { useHistory } from "react-router-dom";
 
 function PokemonList() {
   const history = useHistory();
-  // const { db } = useContext(DefaultContext);
-  let { loading, data } = useQuery(fetchPokemonListQuery, {
+  const { error, data } = useQuery(fetchPokemonListQuery, {
     variables: {
       limit: 20,
       offset: 0,
     },
+    fetchPolicy: "cache-and-network",
   });
-  // let [pokemonData, setPokemonData] = useState([]);
-  // setPokemonData(data);
-  if (!loading) {
-    // return <Loader loadingText="Fetching Data" />;
-    // if (error) return <p>Error : {error}</p>;
-    // db.collection("caughtPokemon")
-    //   .get()
-    //   .then((result) => {
-    //     console.log("result", result);
-    //     data.pokemons.results.map((pokemon) => {
-    //       let count = 0;
-    //       result.forEach((item) => {
-    //         if (item.name === pokemon.name) {
-    //           count += 1;
-    //         }
-    //       });
-
-    //       return { ...pokemon, owned: count };
-    //     });
-    //   });
-
-    return (
-      <Container maxWidth="container.md">
-        <SimpleGrid minChildWidth="150px" spacing="40px" py={7}>
-          {data.pokemons.results.map((item) => (
-            <GridItem key={item.name}>
-              <ListCard
-                name={item.name}
-                imageSrc={item.image}
-                owned={item.owned}
-                onClickCard={() => history.push(`/pokemons/${item.name}`)}
-              />
-            </GridItem>
-          ))}
-        </SimpleGrid>
-      </Container>
-    );
-  } else {
+  if (!data) {
+    if (error) {
+      return <h1>error..</h1>;
+    }
     return <Loader loadingText="Fetching Data" />;
   }
+  return (
+    <Container maxWidth="container.md">
+      <SimpleGrid minChildWidth="150px" spacing="40px" py={7}>
+        {data.pokemons.results.map((item) => (
+          <GridItem key={item.name}>
+            <ListCard
+              name={item.name}
+              imageSrc={item.image}
+              owned={item.owned}
+              onClickCard={() => history.push(`/pokemons/${item.name}`)}
+            />
+          </GridItem>
+        ))}
+      </SimpleGrid>
+    </Container>
+  );
 }
 
 export default PokemonList;
