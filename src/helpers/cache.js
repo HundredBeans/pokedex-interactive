@@ -1,8 +1,6 @@
-import { InMemoryCache, makeVar } from "@apollo/client";
+import { InMemoryCache, makeVar, ApolloClient } from "@apollo/client";
 import { fetchPokemonListQuery } from "./query";
 import { db } from "./db";
-
-export const caughtPokemonsVar = makeVar(null);
 
 // handle async read function https://github.com/apollographql/apollo-client/issues/6852#issuecomment-687091462
 const asyncRead = (fn, query) => {
@@ -28,7 +26,6 @@ export const cache = new InMemoryCache({
         owned: {
           read: asyncRead(async (existing, { readField }) => {
             const pokemonName = readField("name");
-            if (caughtPokemonsVar() === pokemonName) return (existing += 1);
             const caughtPokemons = await db.collection("caughtPokemon").get();
             let count = 0;
             caughtPokemons.forEach((item) => {
@@ -42,4 +39,9 @@ export const cache = new InMemoryCache({
       },
     },
   },
+});
+
+export const client = new ApolloClient({
+  uri: "https://graphql-pokeapi.vercel.app/api/graphql",
+  cache: cache,
 });

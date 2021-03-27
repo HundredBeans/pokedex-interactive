@@ -9,10 +9,10 @@ import {
   Icon,
   Tooltip,
 } from "@chakra-ui/react";
-import { Link as RouterLink, useHistory, matchPath } from "react-router-dom";
+import { useHistory, matchPath, NavLink } from "react-router-dom";
 import ColorModeSwitcher from "../components/ColorModeSwitcher";
 import HeaderLogo from "../components/HeaderLogo";
-import { CgPokemon, CgList } from "react-icons/cg";
+import { FiUsers, FiList } from "react-icons/fi";
 import BackButton from "../components/BackButton";
 
 function Navigation(props) {
@@ -63,12 +63,24 @@ function Navigation(props) {
           <Flex align="center" justify="center" justifyContent="space-between">
             {!isMd ? (
               <React.Fragment>
-                <Link as={RouterLink} to="/pokemons" _hover="none">
+                <Link
+                  to="/pokemons"
+                  as={NavLink}
+                  _activeLink={{ opacity: 0.5 }}
+                  _hover={{ opacity: 0.5 }}
+                  opacity={1}
+                >
                   <Heading _hover={{ opacity: 0.5 }} p={5} fontSize="lg">
                     Pokemons List
                   </Heading>
                 </Link>
-                <Link as={RouterLink} to="/my-pokemons" _hover="none">
+                <Link
+                  as={NavLink}
+                  _activeLink={{ opacity: 0.5 }}
+                  _hover={{ opacity: 0.5 }}
+                  opacity={1}
+                  to="/my-pokemons"
+                >
                   <Heading _hover={{ opacity: 0.5 }} p={5} fontSize="lg">
                     My Pokemons
                   </Heading>
@@ -96,15 +108,29 @@ function Navigation(props) {
         display={!isMd ? "none" : ""}
       >
         <Flex justifyContent="space-around">
-          <Link as={RouterLink} _active={{ color: "green" }} to="/pokemons">
-            <Icon fontSize="5xl" as={CgList} />
+          <Link
+            as={NavLink}
+            _activeLink={{ opacity: 1 }}
+            opacity={0.5}
+            to="/pokemons"
+            textAlign="center"
+            textDecoration="none"
+          >
+            <Icon fontSize="3xl" as={FiList} />
+            <br></br>
+            <span>Pokemon List</span>
           </Link>
           <Link
-            as={RouterLink}
-            _activeLink={{ opacity: 0.5 }}
+            as={NavLink}
+            _activeLink={{ opacity: 1 }}
+            opacity={0.5}
             to="/my-pokemons"
+            textAlign="center"
+            textDecoration="none"
           >
-            <Icon fontSize="5xl" as={CgPokemon} />
+            <Icon fontSize="3xl" as={FiUsers} focusable={true} />
+            <br></br>
+            <span>My Pokemons</span>
           </Link>
         </Flex>
       </Box>

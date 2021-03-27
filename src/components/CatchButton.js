@@ -21,13 +21,6 @@ import {
 import pokeball from "../assets/pokeball.png";
 
 function CatchButton(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const open = () => {
-    setIsOpen(!isOpen);
-  };
-  const closePopover = () => {
-    setIsOpen(false);
-  };
   return (
     <React.Fragment>
       <Box
@@ -44,12 +37,16 @@ function CatchButton(props) {
           boxSize="100px"
           width="100%"
           rounded="full"
-          onClick={open}
+          onClick={props.open}
         >
           <Image src={pokeball} />
         </Button>
       </Box>
-      <Popover isOpen={isOpen} onClose={closePopover} closeOnBlur={false}>
+      <Popover
+        isOpen={props.isOpen}
+        onClose={props.closePopover}
+        closeOnBlur={false}
+      >
         <PopoverTrigger>
           <Box bottom="100px" right="50%" position="fixed"></Box>
         </PopoverTrigger>
@@ -57,7 +54,7 @@ function CatchButton(props) {
           {props.catchSuccess ? (
             <CatchSuccessContent {...props} />
           ) : (
-            <InitialContent close={closePopover} {...props} />
+            <InitialContent close={props.closePopover} {...props} />
           )}
         </PopoverContent>
       </Popover>

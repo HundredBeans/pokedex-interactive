@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { fetchPokemonDetails, fetchPokemonListQuery } from "../helpers/query";
@@ -7,8 +7,9 @@ import DetailsBox from "../components/DetailsBox";
 import CatchButton from "../components/CatchButton";
 import { useToast, Box, Container } from "@chakra-ui/react";
 import { db } from "../helpers/db";
+import { client } from "../helpers/cache";
 import ErrorAlert from "../components/ErrorAlert";
-import { client } from "../context/DefaultContext";
+import { PaginationContext } from "../context/DefaultContext";
 
 function PokemonDetails() {
   const { id } = useParams();
@@ -21,6 +22,15 @@ function PokemonDetails() {
   const [catchSuccess, setCatchResult] = useState(false);
   const [catchLoading, setCatchLoading] = useState(false);
   const [isSaving, setSavingState] = useState(false);
+  const { pageLimit, pokemonListPage } = useContext(PaginationContext);
+  // Catch Popover State
+  const [isOpen, setIsOpen] = useState(false);
+  const openPopover = () => {
+    setIsOpen(!isOpen);
+  };
+  const closePopover = () => {
+    setIsOpen(false);
+  };
   const toast = useToast();
   const catchProbability = 50;
   const showToast = (message, type) => {
@@ -32,13 +42,32 @@ function PokemonDetails() {
       position: "top",
     });
   };
-  const currentPokemonsCached = client.readQuery({
-    query: fetchPokemonListQuery,
-    variables: {
-      limit: 20,
-      offset: 0,
-    },
-  });
+  const updateCachedPokemon = () => {
+    const currentPokemonsCached = client.readQuery({
+      query: fetchPokemonListQuery,
+      variables: {
+        limit: pageLimit,
+        offset: (pokemonListPage - 1) * pageLimit,
+      },
+    });
+    let updatedPokemon = JSON.parse(JSON.stringify(currentPokemonsCached));
+    try {
+      updatedPokemon.pokemons.results.forEach((item) => {
+        item.name === id;
+        item.owned += 1;
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    client.writeQuery({
+      query: fetchPokemonListQuery,
+      data: updatedPokemon,
+      variables: {
+        limit: pageLimit,
+        offset: (pokemonListPage - 1) * pageLimit,
+      },
+    });
+  };
   const catchPokemon = async () => {
     setCatchLoading(true);
     setTimeout(() => {
@@ -75,34 +104,26 @@ function PokemonDetails() {
           db.collection("caughtPokemon")
             .add(caughtPokemonObj)
             .then(() => {
+              closePopover();
               showToast(
                 `${nickname} was successfully added to my-pokemon list!`,
                 "success"
               );
-              let updatedPokemon = JSON.parse(
-                JSON.stringify(currentPokemonsCached)
-              );
-              updatedPokemon.pokemons.results[data.pokemon.id - 1].owned += 1;
-              client.writeQuery({
-                query: fetchPokemonListQuery,
-                data: updatedPokemon,
-                variables: {
-                  limit: 20,
-                  offset: 0,
-                },
-              });
+              updateCachedPokemon();
               // Route to the pokemon details page
               history.push("/my-pokemons");
+              setSavingState(false);
             })
-            .catch((err) =>
-              showToast(`Error adding ${nickname} - ${err.message}`, "error")
-            );
+            .catch((err) => {
+              showToast(`Error adding ${nickname} - ${err.message}`, "error");
+              setSavingState(false);
+            });
         }
       })
       .catch((err) => {
         showToast(err.message, "error");
-      })
-      .finally(() => setSavingState(false));
+        setSavingState(false);
+      });
   };
   if (error) {
     return (
@@ -131,6 +152,7 @@ function PokemonDetails() {
             height={pokemonData.height}
             weight={pokemonData.weight}
             moves={pokemonData.moves}
+            pokemonName={pokemonData.name}
           />
         </Container>
         <CatchButton
@@ -141,6 +163,9 @@ function PokemonDetails() {
           catchSuccess={catchSuccess}
           saveNickname={saveNickname}
           isSaving={isSaving}
+          isOpen={isOpen}
+          closePopover={closePopover}
+          open={openPopover}
         />
       </React.Fragment>
     );

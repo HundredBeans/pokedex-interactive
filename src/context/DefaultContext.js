@@ -1,17 +1,23 @@
-import React from "react";
-import Loader from "../components/Loader";
-import { ApolloClient, ApolloProvider } from "@apollo/client";
-import { cache } from "../helpers/cache";
+import React, { createContext, useState } from "react";
 
-export const client = new ApolloClient({
-  uri: "https://graphql-pokeapi.vercel.app/api/graphql",
-  cache: cache,
-});
+export const PaginationContext = createContext();
 
 export const DefaultContextProvider = (props) => {
-  if (!client) {
-    return <Loader loadingText={"Initializing app..."} />;
-  }
+  const [pokemonListPage, setPokemonListPage] = useState(1);
+  const [myPokemonListPage, setMyPokemonListPage] = useState(1);
+  const pageLimit = 20;
 
-  return <ApolloProvider client={client}>{props.children}</ApolloProvider>;
+  return (
+    <PaginationContext.Provider
+      value={{
+        pokemonListPage,
+        setPokemonListPage,
+        myPokemonListPage,
+        setMyPokemonListPage,
+        pageLimit,
+      }}
+    >
+      {props.children}
+    </PaginationContext.Provider>
+  );
 };

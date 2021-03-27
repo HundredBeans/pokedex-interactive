@@ -13,6 +13,7 @@ import {
   StatNumber,
   Divider,
   GridItem,
+  Text,
 } from "@chakra-ui/react";
 import placeholder from "../assets/placeholder.png";
 
@@ -45,7 +46,9 @@ const CommonInfo = (props) => {
           textAlign="center"
         >
           <GridItem colSpan={3}>
-            <Heading as="h4">STATS</Heading>
+            <Heading as="h4">
+              {props.pokemonName.toString().toUpperCase()}
+            </Heading>
           </GridItem>
           <Stat>
             <StatLabel>ID</StatLabel>
@@ -61,6 +64,11 @@ const CommonInfo = (props) => {
             <StatLabel>Weight</StatLabel>
             <StatNumber>{props.weight}</StatNumber>
           </Stat>
+          {props.caughtDate && (
+            <GridItem colSpan={3}>
+              <Text color="blue">Caught at {props.caughtDate}</Text>
+            </GridItem>
+          )}
         </SimpleGrid>
       </Container>
     </Flex>
