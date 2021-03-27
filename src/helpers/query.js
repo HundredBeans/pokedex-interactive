@@ -46,6 +46,7 @@ export const fetchPokemonDetails = gql`
         }
       }
       weight
+      message
     }
   }
 `;
