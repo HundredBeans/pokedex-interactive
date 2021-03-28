@@ -21,9 +21,6 @@ function ControlButton(props) {
   const open = () => {
     setIsOpen(!isOpen);
   };
-  const closePopover = () => {
-    setIsOpen(false);
-  };
   return (
     <React.Fragment>
       <Box
@@ -45,7 +42,7 @@ function ControlButton(props) {
           <Image src={control} />
         </Button>
       </Box>
-      <Popover isOpen={isOpen} onClose={closePopover} closeOnBlur={false}>
+      <Popover isOpen={isOpen} closeOnBlur={false}>
         <PopoverTrigger>
           <Box bottom="250px" right="50%" position="fixed"></Box>
         </PopoverTrigger>
@@ -72,6 +69,7 @@ const PaginationForm = (props) => {
             value={props.page}
             min={1}
             onChange={(e) => props.onChangePage(e)}
+            id="nickname"
           >
             <NumberInputField />
           </NumberInput>
