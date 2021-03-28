@@ -16,7 +16,7 @@ function RemoveModal(props) {
     <Modal isOpen={props.isOpen} onClose={props.closeModal}>
       <ModalOverlay />
       <ModalContent my="auto">
-        <ModalHeader>Modal Title</ModalHeader>
+        <ModalHeader>Remove Pokemon</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <Text>
