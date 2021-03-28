@@ -1,0 +1,699 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsBox.js test renders the component (pokemonDetails without caughtDate): with-caughtDate 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="chakra-ui-light"
+  >
+    <div
+      id="chakra-toast-portal"
+    >
+      <ul
+        id="chakra-toast-manager-top"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; right: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; right: 0px;"
+      />
+    </div>
+    <div>
+      <div
+        class="css-dvxtzn"
+      >
+        <div
+          class="chakra-stack css-kuxzr6"
+        >
+          <span
+            class="css-mi7bwv"
+          >
+            <span
+              class="css-1v3sf2x"
+            >
+              water
+            </span>
+          </span>
+          <span
+            class="css-mi7bwv"
+          >
+            <span
+              class="css-1v3sf2x"
+            >
+              ice
+            </span>
+          </span>
+        </div>
+        <div
+          class="chakra-container css-ju1cjz"
+        >
+          <img
+            class="chakra-image__placeholder css-1tz2n1v"
+            src="placeholder.png"
+          />
+          <hr
+            aria-orientation="vertical"
+            class="chakra-divider css-1aam7vk"
+            role="separator"
+          />
+          <div
+            class="css-10sffrr"
+          >
+            <div
+              class="css-rklm6r"
+            >
+              <h4
+                class="chakra-heading css-1dklj6k"
+              >
+                DEWGONG
+              </h4>
+            </div>
+            <div
+              class="chakra-stat css-1mbo1ls"
+            >
+              <dl>
+                <dt
+                  class="chakra-stat__label css-14go5ty"
+                >
+                  ID
+                </dt>
+                <dd
+                  class="chakra-stat__number css-1axeus7"
+                >
+                  # 
+                  87
+                </dd>
+              </dl>
+            </div>
+            <div
+              class="chakra-stat css-1mbo1ls"
+            >
+              <dl>
+                <dt
+                  class="chakra-stat__label css-14go5ty"
+                >
+                  Height
+                </dt>
+                <dd
+                  class="chakra-stat__number css-1axeus7"
+                >
+                  17
+                </dd>
+              </dl>
+            </div>
+            <div
+              class="chakra-stat css-1mbo1ls"
+            >
+              <dl>
+                <dt
+                  class="chakra-stat__label css-14go5ty"
+                >
+                  Weight
+                </dt>
+                <dd
+                  class="chakra-stat__number css-1axeus7"
+                >
+                  1200
+                </dd>
+              </dl>
+            </div>
+            <div
+              class="css-rklm6r"
+            >
+              <p
+                class="chakra-text css-14ksm7b"
+              >
+                Caught at 
+                3/28/2021, 7:05:48 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-container css-3aul1p"
+      >
+        <h2
+          class="chakra-heading css-ci02qy"
+        >
+          Moves List
+        </h2>
+        <div
+          class="no-scrollbar css-8a2mz6"
+        >
+          <span
+            class="css-1fza2wb"
+          >
+            <span
+              class="css-1v3sf2x"
+            >
+              pay-day
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="css-dvxtzn"
+    >
+      <div
+        class="chakra-stack css-kuxzr6"
+      >
+        <span
+          class="css-mi7bwv"
+        >
+          <span
+            class="css-1v3sf2x"
+          >
+            water
+          </span>
+        </span>
+        <span
+          class="css-mi7bwv"
+        >
+          <span
+            class="css-1v3sf2x"
+          >
+            ice
+          </span>
+        </span>
+      </div>
+      <div
+        class="chakra-container css-ju1cjz"
+      >
+        <img
+          class="chakra-image__placeholder css-1tz2n1v"
+          src="placeholder.png"
+        />
+        <hr
+          aria-orientation="vertical"
+          class="chakra-divider css-1aam7vk"
+          role="separator"
+        />
+        <div
+          class="css-10sffrr"
+        >
+          <div
+            class="css-rklm6r"
+          >
+            <h4
+              class="chakra-heading css-1dklj6k"
+            >
+              DEWGONG
+            </h4>
+          </div>
+          <div
+            class="chakra-stat css-1mbo1ls"
+          >
+            <dl>
+              <dt
+                class="chakra-stat__label css-14go5ty"
+              >
+                ID
+              </dt>
+              <dd
+                class="chakra-stat__number css-1axeus7"
+              >
+                # 
+                87
+              </dd>
+            </dl>
+          </div>
+          <div
+            class="chakra-stat css-1mbo1ls"
+          >
+            <dl>
+              <dt
+                class="chakra-stat__label css-14go5ty"
+              >
+                Height
+              </dt>
+              <dd
+                class="chakra-stat__number css-1axeus7"
+              >
+                17
+              </dd>
+            </dl>
+          </div>
+          <div
+            class="chakra-stat css-1mbo1ls"
+          >
+            <dl>
+              <dt
+                class="chakra-stat__label css-14go5ty"
+              >
+                Weight
+              </dt>
+              <dd
+                class="chakra-stat__number css-1axeus7"
+              >
+                1200
+              </dd>
+            </dl>
+          </div>
+          <div
+            class="css-rklm6r"
+          >
+            <p
+              class="chakra-text css-14ksm7b"
+            >
+              Caught at 
+              3/28/2021, 7:05:48 PM
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-container css-3aul1p"
+    >
+      <h2
+        class="chakra-heading css-ci02qy"
+      >
+        Moves List
+      </h2>
+      <div
+        class="no-scrollbar css-8a2mz6"
+      >
+        <span
+          class="css-1fza2wb"
+        >
+          <span
+            class="css-1v3sf2x"
+          >
+            pay-day
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`DetailsBox.js test renders the component (pokemonDetails without caughtDate): without-caughtDate 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="chakra-ui-light"
+  >
+    <div
+      id="chakra-toast-portal"
+    >
+      <ul
+        id="chakra-toast-manager-top"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; right: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; right: 0px;"
+      />
+    </div>
+    <div>
+      <div
+        class="css-dvxtzn"
+      >
+        <div
+          class="chakra-stack css-kuxzr6"
+        >
+          <span
+            class="css-mi7bwv"
+          >
+            <span
+              class="css-1v3sf2x"
+            >
+              water
+            </span>
+          </span>
+          <span
+            class="css-mi7bwv"
+          >
+            <span
+              class="css-1v3sf2x"
+            >
+              ice
+            </span>
+          </span>
+        </div>
+        <div
+          class="chakra-container css-ju1cjz"
+        >
+          <img
+            class="chakra-image__placeholder css-1tz2n1v"
+            src="placeholder.png"
+          />
+          <hr
+            aria-orientation="vertical"
+            class="chakra-divider css-1aam7vk"
+            role="separator"
+          />
+          <div
+            class="css-10sffrr"
+          >
+            <div
+              class="css-rklm6r"
+            >
+              <h4
+                class="chakra-heading css-1dklj6k"
+              >
+                DEWGONG
+              </h4>
+            </div>
+            <div
+              class="chakra-stat css-1mbo1ls"
+            >
+              <dl>
+                <dt
+                  class="chakra-stat__label css-14go5ty"
+                >
+                  ID
+                </dt>
+                <dd
+                  class="chakra-stat__number css-1axeus7"
+                >
+                  # 
+                  87
+                </dd>
+              </dl>
+            </div>
+            <div
+              class="chakra-stat css-1mbo1ls"
+            >
+              <dl>
+                <dt
+                  class="chakra-stat__label css-14go5ty"
+                >
+                  Height
+                </dt>
+                <dd
+                  class="chakra-stat__number css-1axeus7"
+                >
+                  17
+                </dd>
+              </dl>
+            </div>
+            <div
+              class="chakra-stat css-1mbo1ls"
+            >
+              <dl>
+                <dt
+                  class="chakra-stat__label css-14go5ty"
+                >
+                  Weight
+                </dt>
+                <dd
+                  class="chakra-stat__number css-1axeus7"
+                >
+                  1200
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-container css-3aul1p"
+      >
+        <h2
+          class="chakra-heading css-ci02qy"
+        >
+          Moves List
+        </h2>
+        <div
+          class="no-scrollbar css-8a2mz6"
+        >
+          <span
+            class="css-1fza2wb"
+          >
+            <span
+              class="css-1v3sf2x"
+            >
+              pay-day
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="css-dvxtzn"
+    >
+      <div
+        class="chakra-stack css-kuxzr6"
+      >
+        <span
+          class="css-mi7bwv"
+        >
+          <span
+            class="css-1v3sf2x"
+          >
+            water
+          </span>
+        </span>
+        <span
+          class="css-mi7bwv"
+        >
+          <span
+            class="css-1v3sf2x"
+          >
+            ice
+          </span>
+        </span>
+      </div>
+      <div
+        class="chakra-container css-ju1cjz"
+      >
+        <img
+          class="chakra-image__placeholder css-1tz2n1v"
+          src="placeholder.png"
+        />
+        <hr
+          aria-orientation="vertical"
+          class="chakra-divider css-1aam7vk"
+          role="separator"
+        />
+        <div
+          class="css-10sffrr"
+        >
+          <div
+            class="css-rklm6r"
+          >
+            <h4
+              class="chakra-heading css-1dklj6k"
+            >
+              DEWGONG
+            </h4>
+          </div>
+          <div
+            class="chakra-stat css-1mbo1ls"
+          >
+            <dl>
+              <dt
+                class="chakra-stat__label css-14go5ty"
+              >
+                ID
+              </dt>
+              <dd
+                class="chakra-stat__number css-1axeus7"
+              >
+                # 
+                87
+              </dd>
+            </dl>
+          </div>
+          <div
+            class="chakra-stat css-1mbo1ls"
+          >
+            <dl>
+              <dt
+                class="chakra-stat__label css-14go5ty"
+              >
+                Height
+              </dt>
+              <dd
+                class="chakra-stat__number css-1axeus7"
+              >
+                17
+              </dd>
+            </dl>
+          </div>
+          <div
+            class="chakra-stat css-1mbo1ls"
+          >
+            <dl>
+              <dt
+                class="chakra-stat__label css-14go5ty"
+              >
+                Weight
+              </dt>
+              <dd
+                class="chakra-stat__number css-1axeus7"
+              >
+                1200
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-container css-3aul1p"
+    >
+      <h2
+        class="chakra-heading css-ci02qy"
+      >
+        Moves List
+      </h2>
+      <div
+        class="no-scrollbar css-8a2mz6"
+      >
+        <span
+          class="css-1fza2wb"
+        >
+          <span
+            class="css-1v3sf2x"
+          >
+            pay-day
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
