@@ -16,6 +16,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import placeholder from "../assets/placeholder.png";
+import ErrorAlert from "./ErrorAlert";
 
 const CommonInfo = (props) => {
   return (
@@ -89,13 +90,25 @@ const MovesList = (props) => {
         overflowY="scroll"
         className="no-scrollbar"
       >
-        {props.moves.map((item, index) => (
-          <Tag key={index} variant="subtle" size="sm" p={2} colorScheme="blue">
-            <TagLabel fontSize={18} textTransform="capitalize">
-              {item.move.name}
-            </TagLabel>
-          </Tag>
-        ))}
+        {props.moves.length === 0 ? (
+          <GridItem colSpan={3}>
+            <ErrorAlert errorTitle="Data Empty" />
+          </GridItem>
+        ) : (
+          props.moves.map((item, index) => (
+            <Tag
+              key={index}
+              variant="subtle"
+              size="sm"
+              p={2}
+              colorScheme="blue"
+            >
+              <TagLabel fontSize={18} textTransform="capitalize">
+                {item.move.name}
+              </TagLabel>
+            </Tag>
+          ))
+        )}
       </SimpleGrid>
     </Container>
   );
