@@ -18,28 +18,30 @@ function AppRouter() {
   return (
     <Router>
       <Suspense fallback={<Loader loadingText={"Loading Content..."} />}>
-        <DefaultLayout>
-          <Switch>
-            <Route exact path="/pokemons">
-              <PokemonList />
-            </Route>
-            <Route exact path="/pokemons/:id">
-              <PokemonDetails />
-            </Route>
-            <Route exact path="/my-pokemons">
-              <MyPokemonList />
-            </Route>
-            <Route exact path="/my-pokemons/:id">
-              <MyPokemonDetails />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/pokemons" />
-            </Route>
-            <Route>
-              <NotFound />
-            </Route>
-          </Switch>
-        </DefaultLayout>
+        <Switch>
+          <DefaultLayout>
+            <Switch>
+              <Route exact path="/pokemons">
+                <PokemonList />
+              </Route>
+              <Route exact path="/pokemons/:id">
+                <PokemonDetails />
+              </Route>
+              <Route exact path="/my-pokemons">
+                <MyPokemonList />
+              </Route>
+              <Route exact path="/my-pokemons/:id">
+                <MyPokemonDetails />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/pokemons" />
+              </Route>
+              <Route>
+                <NotFound />
+              </Route>
+            </Switch>
+          </DefaultLayout>
+        </Switch>
       </Suspense>
     </Router>
   );
