@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import Loader from "./components/Loader";
+import NotFound from "./pages/NotFound";
 // Code Splitting
 const DefaultLayout = lazy(() => import("./layouts/DefaultLayout"));
 const PokemonList = lazy(() => import("./pages/PokemonList"));
@@ -33,6 +34,9 @@ function AppRouter() {
             </Route>
             <Route exact path="/">
               <Redirect to="/pokemons" />
+            </Route>
+            <Route>
+              <NotFound />
             </Route>
           </DefaultLayout>
         </Switch>
