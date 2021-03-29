@@ -6,8 +6,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import Loader from "./components/Loader";
-import NotFound from "./pages/NotFound";
 // Code Splitting
+const NotFound = lazy(() => import("./pages/NotFound"));
 const DefaultLayout = lazy(() => import("./layouts/DefaultLayout"));
 const PokemonList = lazy(() => import("./pages/PokemonList"));
 const PokemonDetails = lazy(() => import("./pages/PokemonDetails"));
@@ -18,8 +18,8 @@ function AppRouter() {
   return (
     <Router>
       <Suspense fallback={<Loader loadingText={"Loading Content..."} />}>
-        <Switch>
-          <DefaultLayout>
+        <DefaultLayout>
+          <Switch>
             <Route exact path="/pokemons">
               <PokemonList />
             </Route>
@@ -38,8 +38,8 @@ function AppRouter() {
             <Route>
               <NotFound />
             </Route>
-          </DefaultLayout>
-        </Switch>
+          </Switch>
+        </DefaultLayout>
       </Suspense>
     </Router>
   );
