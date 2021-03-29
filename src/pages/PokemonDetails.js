@@ -90,7 +90,7 @@ function PokemonDetails() {
     const caughtPokemonObj = {
       nickname,
       pokemonName: id,
-      timeCaught: new Date(),
+      timeCaught: new Date().getTime(),
       imageSrc: data.pokemon.sprites.front_default,
       pokemonData: data,
     };
