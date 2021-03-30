@@ -1,0 +1,923 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component (data fetched): data-fetched 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="chakra-ui-light"
+  >
+    <div
+      id="chakra-toast-portal"
+    >
+      <ul
+        id="chakra-toast-manager-top"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; right: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; right: 0px;"
+      />
+    </div>
+    <div>
+      <div
+        class="chakra-container css-nm5t63"
+      >
+        <div
+          class="css-1t2w4aj"
+        >
+          <div
+            class="css-0"
+          >
+            <div
+              class="css-dglzss"
+            >
+              <div
+                class="css-13i2prf"
+              >
+                <div
+                  class="chakra-skeleton css-120pjbg"
+                >
+                  <h3
+                    class="chakra-heading css-ns7u32"
+                  >
+                    CHARIZARD
+                  </h3>
+                </div>
+                <div
+                  class="chakra-skeleton css-ahyunb"
+                >
+                  <img
+                    class="chakra-image__placeholder css-1t37noe"
+                    src="placeholder.png"
+                  />
+                </div>
+                <div
+                  class="chakra-skeleton css-120pjbg"
+                >
+                  <span
+                    class="chakra-badge css-eywthe"
+                  >
+                    Owned - 
+                    5
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-0"
+          >
+            <div
+              class="css-dglzss"
+            >
+              <div
+                class="css-13i2prf"
+              >
+                <div
+                  class="chakra-skeleton css-120pjbg"
+                >
+                  <h3
+                    class="chakra-heading css-ns7u32"
+                  >
+                    IVYSAUR
+                  </h3>
+                </div>
+                <div
+                  class="chakra-skeleton css-ahyunb"
+                >
+                  <img
+                    class="chakra-image__placeholder css-1t37noe"
+                    src="placeholder.png"
+                  />
+                </div>
+                <div
+                  class="chakra-skeleton css-120pjbg"
+                >
+                  <span
+                    class="chakra-badge css-eywthe"
+                  >
+                    Owned - 
+                    10
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1ue797s"
+        >
+          <button
+            class="chakra-button css-17i1qg7"
+            type="button"
+          >
+            <img
+              class="chakra-image__placeholder css-0"
+            />
+          </button>
+        </div>
+        <div
+          aria-controls="popover-content-7"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          class="css-17xwwk7"
+          id="popover-trigger-7"
+        />
+        <div
+          class="css-11r8ny"
+          data-popper-escaped=""
+          data-popper-placement="bottom"
+          data-popper-reference-hidden=""
+          style="--popper-arrow-shadow-color: #E2E8F0; visibility: hidden; margin: 0px; --popper-transform-origin: top center; position: absolute; left: 0px; top: 0px; transform: translate(0px, 8px);"
+        >
+          <section
+            aria-describedby="popover-body-7"
+            class="chakra-popover__content css-17rezgt"
+            id="popover-content-7"
+            role="dialog"
+            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+            tabindex="-1"
+          >
+            <div
+              class="chakra-popover__body css-1ews2c8"
+              id="popover-body-7"
+            >
+              <div
+                class="chakra-form-control css-1kxonj9"
+                role="group"
+              >
+                <label
+                  class="chakra-form__label css-1wjdhu5"
+                  for="nickname"
+                  id="field-5-label"
+                >
+                  Change Page
+                </label>
+                <div
+                  class="css-16krjww"
+                  value="1"
+                >
+                  <input
+                    aria-disabled="false"
+                    aria-valuemax="559"
+                    aria-valuemin="1"
+                    aria-valuenow="1"
+                    aria-valuetext="1"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="css-xvw9gz"
+                    id="nickname"
+                    inputmode="decimal"
+                    pattern="[0-9]*(.[0-9]+)?"
+                    role="spinbutton"
+                    type="text"
+                    value="1"
+                  />
+                </div>
+              </div>
+            </div>
+            <footer
+              class="chakra-popover__footer css-vxuicp"
+            >
+              <div
+                class="chakra-button__group css-1ezzth2"
+                role="group"
+              >
+                <button
+                  class="chakra-button css-1k6fjms"
+                  disabled=""
+                  type="button"
+                >
+                  Back
+                </button>
+                <button
+                  class="chakra-button css-1k6fjms"
+                  type="button"
+                >
+                  Next
+                </button>
+              </div>
+            </footer>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="chakra-container css-nm5t63"
+    >
+      <div
+        class="css-1t2w4aj"
+      >
+        <div
+          class="css-0"
+        >
+          <div
+            class="css-dglzss"
+          >
+            <div
+              class="css-13i2prf"
+            >
+              <div
+                class="chakra-skeleton css-120pjbg"
+              >
+                <h3
+                  class="chakra-heading css-ns7u32"
+                >
+                  CHARIZARD
+                </h3>
+              </div>
+              <div
+                class="chakra-skeleton css-ahyunb"
+              >
+                <img
+                  class="chakra-image__placeholder css-1t37noe"
+                  src="placeholder.png"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-120pjbg"
+              >
+                <span
+                  class="chakra-badge css-eywthe"
+                >
+                  Owned - 
+                  5
+                   
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <div
+            class="css-dglzss"
+          >
+            <div
+              class="css-13i2prf"
+            >
+              <div
+                class="chakra-skeleton css-120pjbg"
+              >
+                <h3
+                  class="chakra-heading css-ns7u32"
+                >
+                  IVYSAUR
+                </h3>
+              </div>
+              <div
+                class="chakra-skeleton css-ahyunb"
+              >
+                <img
+                  class="chakra-image__placeholder css-1t37noe"
+                  src="placeholder.png"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-120pjbg"
+              >
+                <span
+                  class="chakra-badge css-eywthe"
+                >
+                  Owned - 
+                  10
+                   
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1ue797s"
+      >
+        <button
+          class="chakra-button css-17i1qg7"
+          type="button"
+        >
+          <img
+            class="chakra-image__placeholder css-0"
+          />
+        </button>
+      </div>
+      <div
+        aria-controls="popover-content-7"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="css-17xwwk7"
+        id="popover-trigger-7"
+      />
+      <div
+        class="css-11r8ny"
+        data-popper-escaped=""
+        data-popper-placement="bottom"
+        data-popper-reference-hidden=""
+        style="--popper-arrow-shadow-color: #E2E8F0; visibility: hidden; margin: 0px; --popper-transform-origin: top center; position: absolute; left: 0px; top: 0px; transform: translate(0px, 8px);"
+      >
+        <section
+          aria-describedby="popover-body-7"
+          class="chakra-popover__content css-17rezgt"
+          id="popover-content-7"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
+        >
+          <div
+            class="chakra-popover__body css-1ews2c8"
+            id="popover-body-7"
+          >
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1wjdhu5"
+                for="nickname"
+                id="field-5-label"
+              >
+                Change Page
+              </label>
+              <div
+                class="css-16krjww"
+                value="1"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-valuemax="559"
+                  aria-valuemin="1"
+                  aria-valuenow="1"
+                  aria-valuetext="1"
+                  autocomplete="off"
+                  autocorrect="off"
+                  class="css-xvw9gz"
+                  id="nickname"
+                  inputmode="decimal"
+                  pattern="[0-9]*(.[0-9]+)?"
+                  role="spinbutton"
+                  type="text"
+                  value="1"
+                />
+              </div>
+            </div>
+          </div>
+          <footer
+            class="chakra-popover__footer css-vxuicp"
+          >
+            <div
+              class="chakra-button__group css-1ezzth2"
+              role="group"
+            >
+              <button
+                class="chakra-button css-1k6fjms"
+                disabled=""
+                type="button"
+              >
+                Back
+              </button>
+              <button
+                class="chakra-button css-1k6fjms"
+                type="button"
+              >
+                Next
+              </button>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`renders the component (loading): loading 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="chakra-ui-light"
+  >
+    <div
+      id="chakra-toast-portal"
+    >
+      <ul
+        id="chakra-toast-manager-top"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; right: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; right: 0px;"
+      />
+    </div>
+    <div>
+      <div
+        class="chakra-container css-nm5t63"
+      >
+        <div
+          class="css-1t2w4aj"
+        >
+          <div
+            class="css-0"
+          >
+            <div
+              class="css-dglzss"
+            >
+              <div
+                class="css-13i2prf"
+              >
+                <div
+                  class="chakra-skeleton css-40mwtr"
+                >
+                  <h3
+                    class="chakra-heading css-ns7u32"
+                  >
+                    BULBASAUR
+                  </h3>
+                </div>
+                <div
+                  class="chakra-skeleton css-1mgb0mg"
+                >
+                  <img
+                    class="chakra-image__placeholder css-1t37noe"
+                    src="placeholder.png"
+                  />
+                </div>
+                <div
+                  class="chakra-skeleton css-40mwtr"
+                >
+                  <span
+                    class="chakra-badge css-1b8y92l"
+                  >
+                    Owned - 
+                    0
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-0"
+          >
+            <div
+              class="css-dglzss"
+            >
+              <div
+                class="css-13i2prf"
+              >
+                <div
+                  class="chakra-skeleton css-40mwtr"
+                >
+                  <h3
+                    class="chakra-heading css-ns7u32"
+                  >
+                    BULBASAUR
+                  </h3>
+                </div>
+                <div
+                  class="chakra-skeleton css-1mgb0mg"
+                >
+                  <img
+                    class="chakra-image__placeholder css-1t37noe"
+                    src="placeholder.png"
+                  />
+                </div>
+                <div
+                  class="chakra-skeleton css-40mwtr"
+                >
+                  <span
+                    class="chakra-badge css-1b8y92l"
+                  >
+                    Owned - 
+                    0
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1ue797s"
+        >
+          <button
+            class="chakra-button css-17i1qg7"
+            type="button"
+          >
+            <img
+              class="chakra-image__placeholder css-0"
+            />
+          </button>
+        </div>
+        <div
+          aria-controls="popover-content-31"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          class="css-17xwwk7"
+          id="popover-trigger-31"
+        />
+        <div
+          class="css-11r8ny"
+          data-popper-escaped=""
+          data-popper-placement="bottom"
+          data-popper-reference-hidden=""
+          style="--popper-arrow-shadow-color: #E2E8F0; visibility: hidden; margin: 0px; --popper-transform-origin: top center; position: absolute; left: 0px; top: 0px; transform: translate(0px, 8px);"
+        >
+          <section
+            aria-describedby="popover-body-31"
+            class="chakra-popover__content css-17rezgt"
+            id="popover-content-31"
+            role="dialog"
+            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+            tabindex="-1"
+          >
+            <div
+              class="chakra-popover__body css-1ews2c8"
+              id="popover-body-31"
+            >
+              <div
+                class="chakra-form-control css-1kxonj9"
+                role="group"
+              >
+                <label
+                  class="chakra-form__label css-1wjdhu5"
+                  for="nickname"
+                  id="field-32-label"
+                >
+                  Change Page
+                </label>
+                <div
+                  class="css-16krjww"
+                  value="1"
+                >
+                  <input
+                    aria-disabled="false"
+                    aria-valuemax="56"
+                    aria-valuemin="1"
+                    aria-valuenow="1"
+                    aria-valuetext="1"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class="css-xvw9gz"
+                    id="nickname"
+                    inputmode="decimal"
+                    pattern="[0-9]*(.[0-9]+)?"
+                    role="spinbutton"
+                    type="text"
+                    value="1"
+                  />
+                </div>
+              </div>
+            </div>
+            <footer
+              class="chakra-popover__footer css-vxuicp"
+            >
+              <div
+                class="chakra-button__group css-1ezzth2"
+                role="group"
+              >
+                <button
+                  class="chakra-button css-1k6fjms"
+                  disabled=""
+                  type="button"
+                >
+                  Back
+                </button>
+                <button
+                  class="chakra-button css-1k6fjms"
+                  type="button"
+                >
+                  Next
+                </button>
+              </div>
+            </footer>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="chakra-container css-nm5t63"
+    >
+      <div
+        class="css-1t2w4aj"
+      >
+        <div
+          class="css-0"
+        >
+          <div
+            class="css-dglzss"
+          >
+            <div
+              class="css-13i2prf"
+            >
+              <div
+                class="chakra-skeleton css-40mwtr"
+              >
+                <h3
+                  class="chakra-heading css-ns7u32"
+                >
+                  BULBASAUR
+                </h3>
+              </div>
+              <div
+                class="chakra-skeleton css-1mgb0mg"
+              >
+                <img
+                  class="chakra-image__placeholder css-1t37noe"
+                  src="placeholder.png"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-40mwtr"
+              >
+                <span
+                  class="chakra-badge css-1b8y92l"
+                >
+                  Owned - 
+                  0
+                   
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <div
+            class="css-dglzss"
+          >
+            <div
+              class="css-13i2prf"
+            >
+              <div
+                class="chakra-skeleton css-40mwtr"
+              >
+                <h3
+                  class="chakra-heading css-ns7u32"
+                >
+                  BULBASAUR
+                </h3>
+              </div>
+              <div
+                class="chakra-skeleton css-1mgb0mg"
+              >
+                <img
+                  class="chakra-image__placeholder css-1t37noe"
+                  src="placeholder.png"
+                />
+              </div>
+              <div
+                class="chakra-skeleton css-40mwtr"
+              >
+                <span
+                  class="chakra-badge css-1b8y92l"
+                >
+                  Owned - 
+                  0
+                   
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1ue797s"
+      >
+        <button
+          class="chakra-button css-17i1qg7"
+          type="button"
+        >
+          <img
+            class="chakra-image__placeholder css-0"
+          />
+        </button>
+      </div>
+      <div
+        aria-controls="popover-content-31"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="css-17xwwk7"
+        id="popover-trigger-31"
+      />
+      <div
+        class="css-11r8ny"
+        data-popper-escaped=""
+        data-popper-placement="bottom"
+        data-popper-reference-hidden=""
+        style="--popper-arrow-shadow-color: #E2E8F0; visibility: hidden; margin: 0px; --popper-transform-origin: top center; position: absolute; left: 0px; top: 0px; transform: translate(0px, 8px);"
+      >
+        <section
+          aria-describedby="popover-body-31"
+          class="chakra-popover__content css-17rezgt"
+          id="popover-content-31"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
+        >
+          <div
+            class="chakra-popover__body css-1ews2c8"
+            id="popover-body-31"
+          >
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1wjdhu5"
+                for="nickname"
+                id="field-32-label"
+              >
+                Change Page
+              </label>
+              <div
+                class="css-16krjww"
+                value="1"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-valuemax="56"
+                  aria-valuemin="1"
+                  aria-valuenow="1"
+                  aria-valuetext="1"
+                  autocomplete="off"
+                  autocorrect="off"
+                  class="css-xvw9gz"
+                  id="nickname"
+                  inputmode="decimal"
+                  pattern="[0-9]*(.[0-9]+)?"
+                  role="spinbutton"
+                  type="text"
+                  value="1"
+                />
+              </div>
+            </div>
+          </div>
+          <footer
+            class="chakra-popover__footer css-vxuicp"
+          >
+            <div
+              class="chakra-button__group css-1ezzth2"
+              role="group"
+            >
+              <button
+                class="chakra-button css-1k6fjms"
+                disabled=""
+                type="button"
+              >
+                Back
+              </button>
+              <button
+                class="chakra-button css-1k6fjms"
+                type="button"
+              >
+                Next
+              </button>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

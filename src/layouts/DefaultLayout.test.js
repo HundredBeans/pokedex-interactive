@@ -15,5 +15,7 @@ test("DefaultLayout renders the children", () => {
     </DefaultLayout>
   );
   expect(renderedComponent.getByText("Children")).toBeVisible();
+  expect(renderedComponent.getByText("Navigation")).toBeVisible();
+  expect(renderedComponent.getByText("Navigation")).toBeInTheDocument();
   expect(renderedComponent.getByText("Children")).toBeInTheDocument();
 });
