@@ -7,9 +7,6 @@
     "@chakra-ui/react": "^1.4.1",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^10.4.9",
-    "@testing-library/user-event": "^12.8.3",
     "framer-motion": "^4.0.2",
     "graphql": "^15.5.0",
     "localbase": "^0.7.4",
@@ -42,6 +39,9 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^10.4.9",
+    "@testing-library/user-event": "^12.8.3",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
