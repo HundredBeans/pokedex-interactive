@@ -99,6 +99,7 @@ function PokemonDetails() {
       .get()
       .then((result) => {
         if (result) {
+          setSavingState(false);
           showToast("Nickname already taken", "info");
         } else {
           db.collection("caughtPokemon")

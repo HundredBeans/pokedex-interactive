@@ -123,7 +123,7 @@ const SetNicknameForm = (props) => {
             colorScheme="teal"
             isLoading={props.isSaving}
             loadingText="Saving..."
-            disabled={!nickname}
+            disabled={!nickname || props.isSaving}
             onClick={() => props.saveNickname(nickname)}
           >
             Save
