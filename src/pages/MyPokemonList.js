@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-// import Loader from "../components/Loader";
 import {
   Container,
   SimpleGrid,
@@ -107,12 +106,14 @@ function MyPokemonList() {
 
   useEffect(() => getPokemonList(), []);
 
+  // Set initial data to populate listing using skeleton before the data already fetched
   const skeletonList = Array(pageLimit).fill({
     nickname: "bulbasaur",
     imageSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
   });
 
+  // Mapping the data to the layout
   const layoutMapper = (arr, isLoaded) => {
     return arr.map((item, index) => (
       <GridItem key={index} textAlign="center">
@@ -129,10 +130,6 @@ function MyPokemonList() {
       </GridItem>
     ));
   };
-
-  // if (isLoading) {
-  //   return <Loader loadingText="Load Pokemons..."></Loader>;
-  // }
 
   if (!isLoading && pokemonList.length === 0) {
     return (

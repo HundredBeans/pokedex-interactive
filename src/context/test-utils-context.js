@@ -3,6 +3,7 @@ import { render } from "../test-utils";
 import { MockedProvider } from "@apollo/client/testing";
 import { PaginationContext } from "./PaginationContext";
 
+// Custom render to provide Apollo Provider and Pagination Context Provider for Unit Testing purpose
 export const customRender = (
   ui,
   { providerProps, mockQuery, ...renderOptions }

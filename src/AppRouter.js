@@ -17,6 +17,7 @@ const MyPokemonDetails = lazy(() => import("./pages/MyPokemonDetails"));
 function AppRouter() {
   return (
     <Router>
+      {/* Set Loading fallback */}
       <Suspense fallback={<Loader loadingText={"Loading Content..."} />}>
         <Switch>
           <DefaultLayout>

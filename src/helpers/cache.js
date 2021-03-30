@@ -19,6 +19,7 @@ const asyncRead = (fn, query) => {
   };
 };
 
+// Update "owned" fields before saving the query results into cache by reading the local db
 export const cache = new InMemoryCache({
   typePolicies: {
     PokemonItem: {

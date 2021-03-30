@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useQuery } from "@apollo/client";
 import { fetchPokemonListQuery } from "../helpers/query";
-// import Loader from "../components/Loader";
 import ListCard from "../components/ListCard";
 import { GridItem, SimpleGrid, Container, Box } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
@@ -46,6 +45,7 @@ function PokemonList() {
     setPokemonListPage(pokemonListPage + 1);
   };
 
+  // Initial Data to populate the skeleton loader
   const skeletonList = Array(pageLimit).fill({
     name: "bulbasaur",
     image:

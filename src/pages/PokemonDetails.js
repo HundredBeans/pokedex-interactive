@@ -42,6 +42,7 @@ function PokemonDetails() {
       position: "top",
     });
   };
+  // Update cached data mainly for "owned" field after catch pokemon
   const updateCachedPokemon = () => {
     const currentPokemonsCached = client.readQuery({
       query: fetchPokemonListQuery,
@@ -85,6 +86,7 @@ function PokemonDetails() {
       setCatchLoading(false);
     }, 1500);
   };
+  // Set nickname and save the pokemon
   const saveNickname = (nickname) => {
     setSavingState(true);
     const caughtPokemonObj = {
@@ -98,6 +100,7 @@ function PokemonDetails() {
       .doc({ nickname: nickname })
       .get()
       .then((result) => {
+        // Check if the nickname is already taken
         if (result) {
           setSavingState(false);
           showToast("Nickname already taken", "info");

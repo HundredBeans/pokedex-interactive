@@ -15,9 +15,7 @@ import {
   FormControl,
   FormLabel,
   Input,
-  // useBreakpointValue,
 } from "@chakra-ui/react";
-// import { Formik } from "formik";
 import pokeball from "../assets/pokeball.png";
 
 function CatchButton(props) {
