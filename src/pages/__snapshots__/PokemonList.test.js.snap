@@ -166,32 +166,26 @@ Object {
               >
                 <label
                   class="chakra-form__label css-1wjdhu5"
-                  for="nickname"
+                  for="pagination"
                   id="field-5-label"
                 >
                   Change Page
                 </label>
-                <div
-                  class="css-16krjww"
+                <input
+                  aria-valuemax="559"
+                  aria-valuemin="1"
+                  aria-valuenow="1"
+                  aria-valuetext="1"
+                  autocomplete="off"
+                  autocorrect="off"
+                  class="chakra-input css-1b73kmm"
+                  id="pagination"
+                  inputmode="decimal"
+                  pattern="[0-9]*(.[0-9]+)?"
+                  role="spinbutton"
+                  type="text"
                   value="1"
-                >
-                  <input
-                    aria-disabled="false"
-                    aria-valuemax="559"
-                    aria-valuemin="1"
-                    aria-valuenow="1"
-                    aria-valuetext="1"
-                    autocomplete="off"
-                    autocorrect="off"
-                    class="css-xvw9gz"
-                    id="nickname"
-                    inputmode="decimal"
-                    pattern="[0-9]*(.[0-9]+)?"
-                    role="spinbutton"
-                    type="text"
-                    value="1"
-                  />
-                </div>
+                />
               </div>
             </div>
             <footer
@@ -202,14 +196,19 @@ Object {
                 role="group"
               >
                 <button
+                  aria-disabled="true"
                   class="chakra-button css-1k6fjms"
                   disabled=""
+                  role="button"
+                  tabindex="-1"
                   type="button"
                 >
                   Back
                 </button>
                 <button
                   class="chakra-button css-1k6fjms"
+                  role="button"
+                  tabindex="-1"
                   type="button"
                 >
                   Next
@@ -353,32 +352,26 @@ Object {
             >
               <label
                 class="chakra-form__label css-1wjdhu5"
-                for="nickname"
+                for="pagination"
                 id="field-5-label"
               >
                 Change Page
               </label>
-              <div
-                class="css-16krjww"
+              <input
+                aria-valuemax="559"
+                aria-valuemin="1"
+                aria-valuenow="1"
+                aria-valuetext="1"
+                autocomplete="off"
+                autocorrect="off"
+                class="chakra-input css-1b73kmm"
+                id="pagination"
+                inputmode="decimal"
+                pattern="[0-9]*(.[0-9]+)?"
+                role="spinbutton"
+                type="text"
                 value="1"
-              >
-                <input
-                  aria-disabled="false"
-                  aria-valuemax="559"
-                  aria-valuemin="1"
-                  aria-valuenow="1"
-                  aria-valuetext="1"
-                  autocomplete="off"
-                  autocorrect="off"
-                  class="css-xvw9gz"
-                  id="nickname"
-                  inputmode="decimal"
-                  pattern="[0-9]*(.[0-9]+)?"
-                  role="spinbutton"
-                  type="text"
-                  value="1"
-                />
-              </div>
+              />
             </div>
           </div>
           <footer
@@ -389,14 +382,19 @@ Object {
               role="group"
             >
               <button
+                aria-disabled="true"
                 class="chakra-button css-1k6fjms"
                 disabled=""
+                role="button"
+                tabindex="-1"
                 type="button"
               >
                 Back
               </button>
               <button
                 class="chakra-button css-1k6fjms"
+                role="button"
+                tabindex="-1"
                 type="button"
               >
                 Next
@@ -627,32 +625,26 @@ Object {
               >
                 <label
                   class="chakra-form__label css-1wjdhu5"
-                  for="nickname"
+                  for="pagination"
                   id="field-32-label"
                 >
                   Change Page
                 </label>
-                <div
-                  class="css-16krjww"
+                <input
+                  aria-valuemax="56"
+                  aria-valuemin="1"
+                  aria-valuenow="1"
+                  aria-valuetext="1"
+                  autocomplete="off"
+                  autocorrect="off"
+                  class="chakra-input css-1b73kmm"
+                  id="pagination"
+                  inputmode="decimal"
+                  pattern="[0-9]*(.[0-9]+)?"
+                  role="spinbutton"
+                  type="text"
                   value="1"
-                >
-                  <input
-                    aria-disabled="false"
-                    aria-valuemax="56"
-                    aria-valuemin="1"
-                    aria-valuenow="1"
-                    aria-valuetext="1"
-                    autocomplete="off"
-                    autocorrect="off"
-                    class="css-xvw9gz"
-                    id="nickname"
-                    inputmode="decimal"
-                    pattern="[0-9]*(.[0-9]+)?"
-                    role="spinbutton"
-                    type="text"
-                    value="1"
-                  />
-                </div>
+                />
               </div>
             </div>
             <footer
@@ -663,14 +655,19 @@ Object {
                 role="group"
               >
                 <button
+                  aria-disabled="true"
                   class="chakra-button css-1k6fjms"
                   disabled=""
+                  role="button"
+                  tabindex="-1"
                   type="button"
                 >
                   Back
                 </button>
                 <button
                   class="chakra-button css-1k6fjms"
+                  role="button"
+                  tabindex="-1"
                   type="button"
                 >
                   Next
@@ -814,32 +811,26 @@ Object {
             >
               <label
                 class="chakra-form__label css-1wjdhu5"
-                for="nickname"
+                for="pagination"
                 id="field-32-label"
               >
                 Change Page
               </label>
-              <div
-                class="css-16krjww"
+              <input
+                aria-valuemax="56"
+                aria-valuemin="1"
+                aria-valuenow="1"
+                aria-valuetext="1"
+                autocomplete="off"
+                autocorrect="off"
+                class="chakra-input css-1b73kmm"
+                id="pagination"
+                inputmode="decimal"
+                pattern="[0-9]*(.[0-9]+)?"
+                role="spinbutton"
+                type="text"
                 value="1"
-              >
-                <input
-                  aria-disabled="false"
-                  aria-valuemax="56"
-                  aria-valuemin="1"
-                  aria-valuenow="1"
-                  aria-valuetext="1"
-                  autocomplete="off"
-                  autocorrect="off"
-                  class="css-xvw9gz"
-                  id="nickname"
-                  inputmode="decimal"
-                  pattern="[0-9]*(.[0-9]+)?"
-                  role="spinbutton"
-                  type="text"
-                  value="1"
-                />
-              </div>
+              />
             </div>
           </div>
           <footer
@@ -850,14 +841,19 @@ Object {
               role="group"
             >
               <button
+                aria-disabled="true"
                 class="chakra-button css-1k6fjms"
                 disabled=""
+                role="button"
+                tabindex="-1"
                 type="button"
               >
                 Back
               </button>
               <button
                 class="chakra-button css-1k6fjms"
+                role="button"
+                tabindex="-1"
                 type="button"
               >
                 Next

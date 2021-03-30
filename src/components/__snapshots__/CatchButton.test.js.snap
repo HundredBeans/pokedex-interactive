@@ -48,11 +48,11 @@ Object {
         </button>
       </div>
       <div
-        aria-controls="popover-content-15"
+        aria-controls="popover-content-16"
         aria-expanded="false"
         aria-haspopup="dialog"
         class="css-1rpneay"
-        id="popover-trigger-15"
+        id="popover-trigger-16"
       />
       <div
         class="css-11r8ny"
@@ -62,17 +62,17 @@ Object {
         style="--popper-arrow-shadow-color: #E2E8F0; visibility: hidden; margin: 0px; --popper-transform-origin: top center; position: absolute; left: 0px; top: 0px; transform: translate(0px, 8px);"
       >
         <section
-          aria-describedby="popover-body-15"
-          aria-labelledby="popover-header-15"
+          aria-describedby="popover-body-16"
+          aria-labelledby="popover-header-16"
           class="chakra-popover__content css-l1sj48"
-          id="popover-content-15"
+          id="popover-content-16"
           role="dialog"
           style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
           tabindex="-1"
         >
           <header
             class="chakra-popover__header css-1x1js2i"
-            id="popover-header-15"
+            id="popover-header-16"
           >
             Catch 
           </header>
@@ -95,7 +95,7 @@ Object {
           </button>
           <div
             class="chakra-popover__body css-1ews2c8"
-            id="popover-body-15"
+            id="popover-body-16"
           >
             <div
               class="css-n21wkn"
@@ -165,11 +165,11 @@ Object {
       </button>
     </div>
     <div
-      aria-controls="popover-content-15"
+      aria-controls="popover-content-16"
       aria-expanded="false"
       aria-haspopup="dialog"
       class="css-1rpneay"
-      id="popover-trigger-15"
+      id="popover-trigger-16"
     />
     <div
       class="css-11r8ny"
@@ -179,17 +179,17 @@ Object {
       style="--popper-arrow-shadow-color: #E2E8F0; visibility: hidden; margin: 0px; --popper-transform-origin: top center; position: absolute; left: 0px; top: 0px; transform: translate(0px, 8px);"
     >
       <section
-        aria-describedby="popover-body-15"
-        aria-labelledby="popover-header-15"
+        aria-describedby="popover-body-16"
+        aria-labelledby="popover-header-16"
         class="chakra-popover__content css-l1sj48"
-        id="popover-content-15"
+        id="popover-content-16"
         role="dialog"
         style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
         tabindex="-1"
       >
         <header
           class="chakra-popover__header css-1x1js2i"
-          id="popover-header-15"
+          id="popover-header-16"
         >
           Catch 
         </header>
@@ -212,7 +212,7 @@ Object {
         </button>
         <div
           class="chakra-popover__body css-1ews2c8"
-          id="popover-body-15"
+          id="popover-body-16"
         >
           <div
             class="css-n21wkn"
@@ -424,6 +424,7 @@ Object {
             >
               <label
                 class="chakra-form__label css-1wjdhu5"
+                data-focus=""
                 for="nickname"
                 id="field-9-label"
               >
@@ -431,6 +432,7 @@ Object {
                 's Nickname
               </label>
               <input
+                autocomplete="off"
                 class="chakra-input css-1b73kmm"
                 id="nickname"
               />
@@ -525,6 +527,7 @@ Object {
           >
             <label
               class="chakra-form__label css-1wjdhu5"
+              data-focus=""
               for="nickname"
               id="field-9-label"
             >
@@ -532,6 +535,7 @@ Object {
               's Nickname
             </label>
             <input
+              autocomplete="off"
               class="chakra-input css-1b73kmm"
               id="nickname"
             />
