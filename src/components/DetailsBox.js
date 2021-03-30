@@ -83,7 +83,7 @@ const MovesList = (props) => {
 
       <SimpleGrid
         marginInline={3}
-        columns={3}
+        columns={2}
         spacing={5}
         alignItems="center"
         maxHeight="200px"
@@ -91,7 +91,7 @@ const MovesList = (props) => {
         className="no-scrollbar"
       >
         {props.moves.length === 0 ? (
-          <GridItem colSpan={3}>
+          <GridItem colSpan={2}>
             <ErrorAlert errorTitle="Data Empty" />
           </GridItem>
         ) : (
@@ -103,7 +103,11 @@ const MovesList = (props) => {
               p={2}
               colorScheme="blue"
             >
-              <TagLabel fontSize={18} textTransform="capitalize">
+              <TagLabel
+                fontSize={18}
+                textTransform="capitalize"
+                textAlign="center"
+              >
                 {item.move.name}
               </TagLabel>
             </Tag>
