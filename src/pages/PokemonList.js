@@ -24,10 +24,11 @@ function PokemonList() {
 
   // Pagination Function
   const onChangePage = (e) => {
-    if (!e) {
+    let val = e.target.value;
+    if (!val) {
       return;
     }
-    const pageNumber = parseInt(e);
+    const pageNumber = parseInt(val);
     if (pageNumber < 1) {
       setPokemonListPage(1);
       return;
@@ -36,7 +37,7 @@ function PokemonList() {
       setPokemonListPage(maxPage);
       return;
     }
-    setPokemonListPage(parseInt(e));
+    setPokemonListPage(parseInt(val));
   };
   const prevPage = () => {
     setPokemonListPage(pokemonListPage - 1);

@@ -11,8 +11,8 @@ import {
   Image,
   FormControl,
   FormLabel,
-  NumberInput,
-  NumberInputField,
+  Input,
+  useNumberInput,
 } from "@chakra-ui/react";
 import control from "../assets/control.png";
 
@@ -55,39 +55,41 @@ function ControlButton(props) {
 }
 
 const PaginationForm = (props) => {
+  const {
+    getInputProps,
+    getIncrementButtonProps,
+    getDecrementButtonProps,
+  } = useNumberInput({
+    defaultValue: props.page,
+    min: 1,
+    max: props.maxPage,
+    id: "pagination",
+  });
+  const next = getIncrementButtonProps({ onClick: props.nextPage });
+  const prev = getDecrementButtonProps({ onClick: props.prevPage });
+  const input = getInputProps({
+    isReadOnly: false,
+    onChange: (e) => props.onChangePage(e),
+  });
   return (
     <React.Fragment>
       <PopoverBody>
         <FormControl>
-          <FormLabel htmlFor="nickname" textTransform="capitalize">
+          <FormLabel htmlFor="pagination" textTransform="capitalize">
             Change Page
           </FormLabel>
-          <NumberInput
-            textAlign="center"
-            size="md"
-            max={props.maxPage}
-            value={props.page}
-            min={1}
-            onChange={(e) => props.onChangePage(e)}
-            id="nickname"
-          >
-            <NumberInputField />
-          </NumberInput>
+          <Input {...input} />
         </FormControl>
       </PopoverBody>
       <PopoverFooter textAlign="center">
         <ButtonGroup size="sm">
-          <Button
-            colorScheme="teal"
-            disabled={props.page === 1}
-            onClick={props.prevPage}
-          >
+          <Button {...prev} colorScheme="teal" disabled={props.page === 1}>
             Back
           </Button>
           <Button
+            {...next}
             colorScheme="teal"
             disabled={props.page === props.maxPage}
-            onClick={props.nextPage}
           >
             Next
           </Button>
