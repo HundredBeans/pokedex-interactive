@@ -13,7 +13,7 @@ import { db } from "../helpers/db";
 import { client } from "../helpers/cache";
 import { useHistory } from "react-router";
 import RemoveButton from "../components/RemoveButton";
-import { PaginationContext } from "../context/DefaultContext";
+import { PaginationContext } from "../context/PaginationContext";
 import { fetchPokemonListQuery } from "../helpers/query";
 import RemoveModal from "../components/RemoveModal";
 import ErrorAlert from "../components/ErrorAlert";

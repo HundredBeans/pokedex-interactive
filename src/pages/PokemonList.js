@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import { DefaultContext } from "../context/DefaultContext";
 import { useQuery } from "@apollo/client";
 import { fetchPokemonListQuery } from "../helpers/query";
 // import Loader from "../components/Loader";
@@ -7,9 +6,8 @@ import ListCard from "../components/ListCard";
 import { GridItem, SimpleGrid, Container, Box } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 import ControlButton from "../components/ControlButton";
-import { PaginationContext } from "../context/DefaultContext";
+import { PaginationContext } from "../context/PaginationContext";
 import ErrorAlert from "../components/ErrorAlert";
-// import debounce from "lodash.debounce";
 
 function PokemonList() {
   const history = useHistory();

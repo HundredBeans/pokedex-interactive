@@ -9,7 +9,7 @@ import { useToast, Box, Container } from "@chakra-ui/react";
 import { db } from "../helpers/db";
 import { client } from "../helpers/cache";
 import ErrorAlert from "../components/ErrorAlert";
-import { PaginationContext } from "../context/DefaultContext";
+import { PaginationContext } from "../context/PaginationContext";
 
 function PokemonDetails() {
   const { id } = useParams();
