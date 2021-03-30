@@ -112,7 +112,12 @@ const SetNicknameForm = (props) => {
           <FormLabel htmlFor="nickname" textTransform="capitalize">
             Your {props.pokemonName}&apos;s Nickname
           </FormLabel>
-          <Input id="nickname" onChange={handleChange} />
+          <Input
+            id="nickname"
+            autoComplete="off"
+            autoFocus="on"
+            onChange={handleChange}
+          />
         </FormControl>
       </PopoverBody>
       <PopoverFooter d="flex" justifyContent="flex-end">
